@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn-box {
+        width: 100%;
+        text-align: center;
+        padding: 50px 0px;
+      }
+      .grid-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div style="height: 100vh;">
+      <header>
+        <button class="btn-clear">Simple</button>
+        <button class="hex-colr" onclick="hexbtnfn()">Hex</button>
+      </header>
+
+      <div class="btn-box">
+        <button class="change-colr" disabled>Change Color</button>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-column-2">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+            tempore molestias repellendus vero eius ipsum maxime maiores odio
+            dignissimos impedit, necessitatibus exercitationem in vel unde amet
+            provident incidunt esse dolores enim. Et tenetur mollitia temporibus
+            aliquid suscipit repellat, velit hic ullam, dolore incidunt quisquam
+            quaerat nihil eos eligendi libero reiciendis veniam dolorem illo in
+            cumque modi. Error sed similique unde! Reprehenderit esse molestiae
+            culpa vel dignissimos labore, similique, quas sunt temporibus totam
+            ea at tenetur suscipit explicabo! Placeat nam incidunt praesentium
+            esse eius porro nobis est iure fuga quasi quisquam explicabo aliquam
+            vero, optio quidem. Iusto distinctio deleniti doloremque ratione?
+          </p>
+        </div>
+        <div class="grid-column-2">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+            tempore molestias repellendus vero eius ipsum maxime maiores odio
+            dignissimos impedit, necessitatibus exercitationem in vel unde amet
+            provident incidunt esse dolores enim. Et tenetur mollitia temporibus
+            aliquid suscipit repellat, velit hic ullam, dolore incidunt quisquam
+            quaerat nihil eos eligendi incidunt praesentium esse eius porro
+            nobis est iure fuga quasi quisquam explicabo aliquam vero, optio
+            quidem. Iusto distinctio deleniti doloremque ratione?
+          </p>
+        </div>
+        <div class="grid-column-2">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+            tempore molestias repellendus vero eius ipsum maxime maiores odio
+            dignissimos impedit, necessitatibus exercitationem in vel unde amet
+            provident incidunt esse dolores enim. Et tenetur mollitia temporibus
+            aliquid suscipit repellat, velit hic ullam, dolore incidunt quisquam
+            quaerat nihil eos eligenditur suscipit explicabo! Placeat nam
+            incidunt praesentium esse eius porro nobis est iure fuga quasi
+            quisquam explicabo aliquam vero, optio quidem. Iusto distinctio
+            deleniti doloremque ratione?
+          </p>
+        </div>
+        <div class="grid-column-2">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+            tempore molestias repellendus vero eius ipsum maxime maiores odio
+            dignissimos impedit, necessitatibus exercitationem in vel unde amet
+            provident incidunt esse dolores enim. Et tenetur mollitia temporibus
+            aliquid suscipit repellat, velit hic ullam, dolore incidunt quisquam
+            quaerat nihil eos eligendi libero reiciendis veniam dolorem illo in
+            cumque modi. Error sed similique unde! Reprehenderit esse molestiae
+            culpa vel dignissimos labore, similique, quas sunt temporibus totam
+            ea at tenetur suscipit explicabo! Placeat nam incidunt praesentium
+            esse eius porro nobis est iure fuga quasi quisquam explicabo aliquam
+            vero, optio quidem. Iusto distinctio deleniti doloremque ratione?
+          </p>
+        </div>
+        <div class="grid-column-2">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+            tempore molestias repellendus vero eius ipsum maxime maiores odio
+            dignissimos impedit, necessitatibus exercitationem in vel unde amet
+            provident incidunt esse dolores enim. Et tenetur mollitia temporibus
+            aliquid suscipit repellat, velit hic ullam, dolore incidunt quisquam
+            quaerat nihil eos eligendi libero reiciendis veniam dolorem illo in
+            cumque modi. Error sed similique unde! Reprehenderit esse molestiae
+            culpa
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <input type="text" placeholder="Add Value" id="inputbox" />
+        <button onclick="push()">Add Value</button>
+        <button onclick="pop()">Delete Value</button>
+        <button onclick="display()">Display Value</button>
+      </div>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css"
+    />
+    <style>
+      /* Most of these styles could be removed but are for the demo to look better */
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        font-weight: 300;
+      }
+      body {
+        overflow-x: hidden;
+      }
+
+      a {
+        color: white;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      .full-screen {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #masthead {
+        position: fixed;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        z-index: 9999;
+        width: 100%;
+      }
+      #masthead a {
+        padding: 1rem 2rem;
+        flex: 1;
+        text-align: center;
+      }
+      #masthead a.active {
+        background: Blue;
+      }
+      .anchor-nav {
+        display: flex;
+        width: 100%;
+      }
+
+      #panels #panels-container {
+        height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ddd;
+      }
+      #panels #panels-container .panel {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #333;
+        text-align: left;
+        border-right: 1px solid #f00;
+      }
+      #panels #panels-container .panel img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      #panels #panels-container .panel .panels-navigation {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      }
+      #panels #panels-container .panel .anchor-panel,
+      #panels #panels-container .panel .nav-panel {
+        color: #000;
+        text-transform: uppercase;
+        margin-right: 2rem;
+      }
+      #panels #panels-container .panels-navigation {
+        position: absolute;
+        width: 100%;
+        bottom: 2rem;
+        right: 2rem;
+        
+      }
+    </style>
+    <div id="page" class="site">
+        <header id="masthead" class="site-header" role="banner">
+        <nav class="anchor-nav" id="top-menu" role="navigation">
+          <p><a showme="#panel-1" class="develop-method">Panel 1</a></p>
+          <p><a showme="#panel-2" class="develop-method">Panel 2</a></p>
+          <p><a showme="#panel-3" class="develop-method">Panel 3</a></p>
+          <p><a showme="#panel-4" class="develop-method">Panel 4</a></p>
+          <p><a showme="#panel-5" class="develop-method">Panel 5</a></p>
+        </nav>
+      </header>
+
+      <main id="content" class="site-content" role="main">
+        <section id="intro" class="full-screen pt-5 blue">
+          <h1>A cool title</h1>
+
+          <div id="clouds-layer-1" class="clouds"></div>
+          <div id="clouds-layer-2" class="clouds"></div>
+        </section>
+
+        <section id="panels">
+          <div id="panels-container" style="width: 500%;">
+            <article id="panel-1" class="panel full-screen red">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+                    <h2>Panel 1</h2>
+
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="plus">
+                        <a href="#panel-2" class="anchor">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-2" class="panel full-screen orange">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+                    <h2>Panel 2</h2>
+
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus">
+                        <a href="#panel-1" class="anchor">Prev</a>
+                      </div>
+                      <div class="nav-panel" data-sign="plus">
+                        <a href="#panel-3" class="anchor">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-3" class="panel full-screen purple">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+                    <h2>Panel 3</h2>
+
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus">
+                        <a href="#panel-2" class="anchor">Prev</a>
+                      </div>
+                      <div class="nav-panel" data-sign="plus">
+                        <a href="#panel-4" class="anchor">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-4" class="panel full-screen green">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+                    <h2>Panel 4</h2>
+
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus">
+                        <a href="#panel-3" class="anchor">Prev</a>
+                      </div>
+                      <div class="nav-panel" data-sign="plus">
+                        <a href="#panel-5" class="anchor">Next</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-5" class="panel full-screen gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="" alt="" />
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+                    <h2>Panel 5</h2>
+
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="minus">
+                        <a href="#panel-4" class="anchor">Prev</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="map" class="full-screen"></section>
+      </main>
+    </div>
+
+    <header>
+      <a href="https://greensock.com/scrolltrigger">
+        <img
+          class="greensock-icon"
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg"
+          width="200"
+          height="64"
+        />
+      </a>
+    </header>
+    
+    <!-- <script src="js/app.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+ <script src="scrollanimation.js"></script>
+  
+  </body>
+</html>
